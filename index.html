@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind+daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Plant-Tracer</title>
+</head>
+
+<body>
+    <header>
+        <div class="w-[80%] mx-auto">
+            <h1 class="text-6xl text-green-500 font-bold my-3">Plant Tracer</h1>
+        </div>
+        <div class="conainer w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="card bg-pink-100  shadow-sm text-left pl-8">
+                <div class="card-body font-bold text-4xl text-purple-500">
+                    <h1 id="total">0</h1>
+                    <h1>Total</h1>
+                </div>
+            </div>
+            <div class="card bg-green-100  shadow-sm text-left pl-8">
+                <div class="card-body font-bold text-4xl text-purple-500">
+                    <h1 id="thriving-1">0</h1>
+                    <h1>Thriving</h1>
+                </div>
+            </div>
+            <div class="card bg-red-100  shadow-sm text-left pl-8">
+                <div class="card-body font-bold text-4xl text-purple-500">
+                    <h1 id="struglinlg-1">0</h1>
+                    <h1>Strugling</h1>
+                </div>
+            </div>
+
+        </div>
+        <hr class="bg-gray-500 my-10">
+    </header>
+    <main class="w-[80%] mx-auto mb-5">
+        <div class="button mb-5">
+            <button id="all" class="btn bg-black text-white">All</button>
+            <button id="thrivling-2" class="btn bg-gray-200">Thrivling</button>
+            <button id="strugling-2" class="btn bg-gray-200">Strugling</button>
+
+        </div>
+
+        <div id="all-card" class=" grid grid-cols-1 gap-6 ">
+            <div class="card bg-base-300 shadow-sm pl-8 w-full grid grid-cols-1 gap-6">
+                <div class="  w-full p-5  flex justify-between items-start">
+
+                    <!-- left -->
+                    <div class="p1 space-y-6">
+                        <!-- p1 -->
+                        <div>
+                            <h1 class="text-2xl font-medium">Plant Name 1</h1>
+                            <p class="text-gray-600">Latin Name</p>
+                        </div>
+                        <!-- p2 -->
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300  p-1 rounded-b-sm">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1  rounded-b-sm">Weekly</p>
+                        </div>
+                        <!-- P3 -->
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray">Not Applicable</p>
+                            <p class="text-gray-600">New Leaf Unfurling By The East Window</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thrivling-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id='strugling-3'>Strugling</button>
+                        </div>
+                    </div>
+
+                    <!-- right -->
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card bg-base-300 shadow-sm pl-8 w-full">
+                <div class="  w-full p-5  flex justify-between items-start">
+
+                    <!-- left -->
+                    <div class="p1 space-y-6">
+                        <!-- p1 -->
+                        <div>
+                            <h1 class="text-2xl font-medium">Plant Name 2</h1>
+                            <p class="text-gray-600">Latin Name</p>
+                        </div>
+                        <!-- p2 -->
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300  p-1 rounded-b-sm">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1  rounded-b-sm">Weekly</p>
+                        </div>
+                        <!-- P3 -->
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray">Not Applicable</p>
+                            <p class="text-gray-600">New Leaf Unfurling By The East Window</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thrivling-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id='strugling-3'>Strugling</button>
+                        </div>
+                    </div>
+
+                    <!-- right -->
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card bg-base-300 shadow-sm pl-8 w-full">
+                <div class="  w-full p-5  flex justify-between items-start">
+
+                    <!-- left -->
+                    <div class="p1 space-y-6">
+                        <!-- p1 -->
+                        <div>
+                            <h1 class="text-2xl font-medium">Plant Name 3</h1>
+                            <p class="text-gray-600">Latin Name</p>
+                        </div>
+                        <!-- p2 -->
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300  p-1 rounded-b-sm">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1  rounded-b-sm">Weekly</p>
+                        </div>
+                        <!-- P3 -->
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray">Not Applicable</p>
+                            <p class="text-gray-600">New Leaf Unfurling By The East Window</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thrivling-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id='strugling-3'>Strugling</button>
+                        </div>
+                    </div>
+
+                    <!-- right -->
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+    </main>
+</body>
+
+</html>
