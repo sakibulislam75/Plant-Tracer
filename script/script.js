@@ -81,7 +81,7 @@ mainContainer.addEventListener('click', function(event) {
         sts1.classList.replace('badge-gray', 'badge-success');
 
 
-        // // 🔥 Left border green + thick
+        // //  Left border green + thick
         // parentNode.classList.remove('border-gray-300');
         // parentNode.classList.add('border-green-500');
         // parentNode.classList.remove('border-l-4');
@@ -134,7 +134,27 @@ mainContainer.addEventListener('click', function(event) {
         allcount();
 
 
+    } else if (event.target.classList.contains('btn-delete')) {
+
+        let parentNode = event.target.parentNode.parentNode;
+
+        let plantName = parentNode.querySelector('.plant-name').innerText;
+
+        // array থেকে delete
+        thrivingList = thrivingList.filter(
+            item => item.plantName !== plantName
+        );
+
+        struglingList = struglingList.filter(
+            item => item.plantName !== plantName
+        );
+
+        // DOM থেকে card delete
+        parentNode.remove();
+
+        allcount();
     }
+
 
 });
 
