@@ -1,20 +1,25 @@
 let thrivingList = [];
-let struglingLisit = [];
+let struglingList = [];
 let total = document.getElementById('total');
 let thrivingCount = document.getElementById('thriving-1');
 let struglingCount = document.getElementById('strugling-1');
 
+// btn
 let allBtn = document.getElementById('all');
 let thrivingBtn = document.getElementById('thriving-2');
 let struglingBtn = document.getElementById('strugling-2');
 
 let all = document.getElementById('all-card');
+const mainContainer = document.querySelector('main');
+const filterSection = document.getElementById('filterSection')
+
 
 
 function allcount() {
     total.innerText = all.children.length;
     thrivingCount.innerText = thrivingList.length;
-    struglingCount.innerText = struglingLisit.length;
+
+    struglingCount.innerText = struglingList.length;
 }
 allcount();
 
@@ -31,5 +36,86 @@ function toggleStyle(id) {
     let clickId = document.getElementById(id);
     clickId.classList.remove('bg-gray-200', 'text-black');
     clickId.classList.add('bg-black', 'text-white');
+
+
+}
+
+
+// event-delegation
+mainContainer.addEventListener('click', function(event) {
+
+    if (event.target.classList.contains('btn-success')) {
+
+        let parentNode = event.target.closest('.card');
+
+        let plantName = parentNode.querySelector('.plant-name').innerText;
+        let latinName = parentNode.querySelector('.latin-name').innerText;
+        let light = parentNode.querySelector('.light').innerText;
+        let water = parentNode.querySelector('.water').innerText;
+        let sts = parentNode.querySelector('.sts').innerText;
+        let note = parentNode.querySelector('.note').innerText;
+
+        let cardInfo = { plantName, latinName, light, water, sts, note };
+
+        let thrivingListExist = thrivingList.find(item => item.plantName == cardInfo.plantName);
+
+        const sts1 = parentNode.querySelector('.sts');
+        sts1.innerText = 'Thrive';
+        sts1.classList.replace('badge-gray', 'badge-success');
+
+        // // 🔥 Left border green + thick
+        // parentNode.classList.remove('border-gray-300');
+        // parentNode.classList.add('border-green-500');
+        // parentNode.classList.remove('border-l-4');
+        // parentNode.classList.add('border-l-8');
+
+        if (!thrivingListExist) {
+            thrivingList.push(cardInfo);
+        }
+
+        allcount();
+        renderThriving();
+    }
+
+});
+
+// filterSection
+function renderThriving() {
+    filterSection.innerHTML = ' ';
+    for (let thrive of thrivingList) {
+        console.log(thrive);
+        let div = document.createElement('div');
+        div.className = 'w-full p-5  flex justify-between items-start border-left border-green';
+        div.innerHTML = ` <!-- left -->
+                    <div class="p1 space-y-6">
+                        <!-- p1 -->
+                        <div>
+                            <h1 class="text-2xl font-medium plant-name">${thrive.plantName}</h1>
+                            <p class="text-gray-600 latin-name">Latin Name</p>
+                        </div>
+                        <!-- p2 -->
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300  p-1 rounded-b-sm light">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1  rounded-b-sm water">Weekly</p>
+                        </div>
+                        <!-- P3 -->
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray sts">Not Applicable</p>
+                            <p class="text-gray-600 note">New Leaf Unfurling By The East Window</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thrivling-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id='strugling-3'>Strugling</button>
+                        </div>
+                    </div>
+
+                    <!-- right -->
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5">Delete</button>
+                    </div>`;
+
+        filterSection.appendChild(div);
+    }
 
 }
