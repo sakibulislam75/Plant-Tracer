@@ -134,13 +134,12 @@ mainContainer.addEventListener('click', function(event) {
         allcount();
 
 
-    } else if (event.target.classList.contains('btn-delete')) {
+    } else if (event.target.closest(".btn-delete")) {
 
-        let parentNode = event.target.parentNode.parentNode;
+        let parentNode = event.target.closest(".card"); //closest -use to search above the parentNode
 
         let plantName = parentNode.querySelector('.plant-name').innerText;
 
-        // array থেকে delete
         thrivingList = thrivingList.filter(
             item => item.plantName !== plantName
         );
@@ -149,7 +148,6 @@ mainContainer.addEventListener('click', function(event) {
             item => item.plantName !== plantName
         );
 
-        // DOM থেকে card delete
         parentNode.remove();
 
         allcount();

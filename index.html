@@ -25,13 +25,13 @@
             <div class="card bg-green-100  shadow-sm text-left pl-8">
                 <div class="card-body font-bold text-4xl text-purple-500">
                     <h1 id="thriving-1">0</h1>
-                    <h1>Thriving</h1>
+                    <h1>Thrive</h1>
                 </div>
             </div>
             <div class="card bg-red-100  shadow-sm text-left pl-8">
                 <div class="card-body font-bold text-4xl text-purple-500">
                     <h1 id="strugling-1">0</h1>
-                    <h1>Strugling</h1>
+                    <h1>Struggle</h1>
                 </div>
             </div>
 
@@ -42,109 +42,288 @@
         <div class="button mb-5">
             <button onclick="toggleStyle('all')" id="all" class="btn bg-black text-white">All</button>
             <button onclick="toggleStyle('thriving-2')" id="thriving-2" class="btn bg-gray-200">Thrivling</button>
-            <button onclick="toggleStyle('strugling-2')" id="strugling-2" class="btn bg-gray-200">Strugling</button>
+            <button onclick="toggleStyle('strugling-2')" id="strugling-2" class="btn bg-gray-200">Struggling</button>
 
         </div>
         <div id="filterSection" class="hidden">
 
         </div>
+
         <div id="all-card" class=" grid grid-cols-1 gap-6 ">
+
+            <!---- CARD 1 ----->
             <div class="card bg-base-300 shadow-sm pl-8 w-full grid grid-cols-1 gap-6">
-                <div class="  w-full p-5  flex justify-between items-start">
+                <div class="w-full p-5 flex justify-between items-start">
 
-                    <!-- left -->
                     <div class="p1 space-y-6">
-                        <!-- p1 -->
+
                         <div>
-                            <h1 class="text-2xl font-medium plant-name">Plant Name 1</h1>
-                            <p class="text-gray-600 latin-name">Latin Name</p>
+                            <h1 class="text-2xl font-medium plant-name">Rose</h1>
+                            <p class="text-gray-600 latin-name">Rosa</p>
                         </div>
-                        <!-- p2 -->
+
                         <div class="flex gap-1">
-                            <p class="bg-gray-300  p-1 rounded-b-sm light">Bright Indicate</p>
-                            <p class="bg-gray-300 p-1  rounded-b-sm water">Weekly</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">Weekly</p>
                         </div>
-                        <!-- P3 -->
+
                         <div class="space-y-1.5">
                             <p class="badge badge-outline badge-gray sts">Not Applicable</p>
-                            <p class="text-gray-600 note">New Leaf Unfurling By The East Window</p>
+                            <p class="text-gray-600 note">Place near sunlight window</p>
                         </div>
 
                         <div class="space-x-2 mt-2">
                             <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
-                            <button class="btn btn-outline btn-error px-5 py-2" id='strugling-3'>Strugling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
                         </div>
+
                     </div>
 
-                    <!-- right -->
                     <div class="p2">
                         <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
                     </div>
 
                 </div>
             </div>
-            <div class="card bg-base-300 shadow-sm pl-8 w-full">
-                <div class="  w-full p-5  flex justify-between items-start">
 
-                    <!-- left -->
+            <!---- CARD 2 ----->
+            <div class="card bg-base-300 shadow-sm pl-8 w-full mt-4">
+                <div class="w-full p-5 flex justify-between items-start">
+
                     <div class="p1 space-y-6">
-                        <!-- p1 -->
+
                         <div>
-                            <h1 class="text-2xl font-medium plant-name">Plant Name 2</h1>
-                            <p class="text-gray-600 latin-name">Latin Name</p>
+                            <h1 class="text-2xl font-medium plant-name">Aloe Vera</h1>
+                            <p class="text-gray-600 latin-name">Aloe barbadensis miller</p>
                         </div>
-                        <!-- p2 -->
+
                         <div class="flex gap-1">
-                            <p class="bg-gray-300  p-1 rounded-b-sm light">Bright Indicate</p>
-                            <p class="bg-gray-300 p-1  rounded-b-sm water">Weekly</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">Weekly</p>
                         </div>
-                        <!-- P3 -->
+
                         <div class="space-y-1.5">
                             <p class="badge badge-outline badge-gray sts">Not Applicable</p>
-                            <p class="text-gray-600 note">New Leaf Unfurling By The East Window</p>
+                            <p class="text-gray-600 note">Water when soil is dry</p>
                         </div>
 
                         <div class="space-x-2 mt-2">
                             <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
-                            <button class="btn btn-outline btn-error px-5 py-2" id='strugling-3'>Struggling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
                         </div>
+
                     </div>
 
-                    <!-- right -->
                     <div class="p2">
                         <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
                     </div>
 
                 </div>
             </div>
-            <div class="card bg-base-300 shadow-sm pl-8 w-full">
-                <div class="   w-full p-5  flex justify-between items-start">
 
-                    <!-- left -->
+            <!---- CARD 3 ----->
+            <div class="card bg-base-300 shadow-sm pl-8 w-full mt-4">
+                <div class="w-full p-5 flex justify-between items-start">
+
                     <div class="p1 space-y-6">
-                        <!-- p1 -->
+
                         <div>
-                            <h1 class="text-2xl font-medium plant-name">Plant Name 3</h1>
-                            <p class="text-gray-600 latin-name">Latin Name</p>
+                            <h1 class="text-2xl font-medium plant-name">Snake Plant</h1>
+                            <p class="text-gray-600 latin-name">Dracaena trifasciata</p>
                         </div>
-                        <!-- p2 -->
+
                         <div class="flex gap-1">
-                            <p class="bg-gray-300  p-1 rounded-b-sm light">Bright Indicate</p>
-                            <p class="bg-gray-300 p-1  rounded-b-sm water">Weekly</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Low Light Tolerant</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">2 Weeks</p>
                         </div>
-                        <!-- P3 -->
+
                         <div class="space-y-1.5">
                             <p class="badge badge-outline badge-gray sts">Not Applicable</p>
-                            <p class="text-gray-600 note">New Leaf Unfurling By The East Window</p>
+                            <p class="text-gray-600 note">Very low maintenance plant</p>
                         </div>
 
                         <div class="space-x-2 mt-2">
                             <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
-                            <button class="btn btn-outline btn-error px-5 py-2" id='strugling-3'>Strugling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
                         </div>
+
                     </div>
 
-                    <!-- right -->
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!---- CARD 4 ----->
+            <div class="card bg-base-300 shadow-sm pl-8 w-full">
+                <div class="w-full p-5 flex justify-between items-start">
+
+                    <div class="p1 space-y-6">
+
+                        <div>
+                            <h1 class="text-2xl font-medium plant-name">Rose</h1>
+                            <p class="text-gray-600 latin-name">Rosa</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">Weekly</p>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray sts">Not Applicable</p>
+                            <p class="text-gray-600 note">Place near sunlight window</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
+                        </div>
+
+                    </div>
+
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!---- CARD 5 ----->
+            <div class="card bg-base-300 shadow-sm pl-8 w-full mt-4">
+                <div class="w-full p-5 flex justify-between items-start">
+
+                    <div class="p1 space-y-6">
+
+                        <div>
+                            <h1 class="text-2xl font-medium plant-name">Aloe Vera</h1>
+                            <p class="text-gray-600 latin-name">Aloe barbadensis miller</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">Weekly</p>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray sts">Not Applicable</p>
+                            <p class="text-gray-600 note">Water when soil is dry</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
+                        </div>
+
+                    </div>
+
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!---- CARD 6 ----->
+            <div class="card bg-base-300 shadow-sm pl-8 w-full mt-4">
+                <div class="w-full p-5 flex justify-between items-start">
+
+                    <div class="p1 space-y-6">
+
+                        <div>
+                            <h1 class="text-2xl font-medium plant-name">Snake Plant</h1>
+                            <p class="text-gray-600 latin-name">Dracaena trifasciata</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Low Light Tolerant</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">2 Weeks</p>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray sts">Not Applicable</p>
+                            <p class="text-gray-600 note">Very low maintenance plant</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
+                        </div>
+
+                    </div>
+
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!---- CARD 7 ----->
+            <div class="card bg-base-300 shadow-sm pl-8 w-full mt-4">
+                <div class="w-full p-5 flex justify-between items-start">
+
+                    <div class="p1 space-y-6">
+
+                        <div>
+                            <h1 class="text-2xl font-medium plant-name">Money Plant</h1>
+                            <p class="text-gray-600 latin-name">Epipremnum aureum</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Indirect Sunlight</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">Weekly</p>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray sts">Not Applicable</p>
+                            <p class="text-gray-600 note">Grow near window light</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
+                        </div>
+
+                    </div>
+
+                    <div class="p2">
+                        <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!---- CARD 4 ----->
+            <div class="card bg-base-300 shadow-sm pl-8 w-full mt-4">
+                <div class="w-full p-5 flex justify-between items-start">
+
+                    <div class="p1 space-y-6">
+
+                        <div>
+                            <h1 class="text-2xl font-medium plant-name">Tulip</h1>
+                            <p class="text-gray-600 latin-name">Tulipa</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <p class="bg-gray-300 p-1 rounded-b-sm light">Bright Indicate</p>
+                            <p class="bg-gray-300 p-1 rounded-b-sm water">Weekly</p>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <p class="badge badge-outline badge-gray sts">Not Applicable</p>
+                            <p class="text-gray-600 note">Spring flowering plant</p>
+                        </div>
+
+                        <div class="space-x-2 mt-2">
+                            <button class="btn btn-outline btn-success px-5 py-2" id="thriving-3">Thrivling</button>
+                            <button class="btn btn-outline btn-error px-5 py-2" id="strugling-3">Strugling</button>
+                        </div>
+
+                    </div>
+
                     <div class="p2">
                         <button class="btn bg-red-200 font-bold text-red-400 px-5 btn-delete">Delete</button>
                     </div>
